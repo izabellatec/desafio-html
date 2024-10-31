@@ -1,79 +1,321 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pagina inicial</title>
+    <title>Template - Utilizar como modelo</title>
+    <link rel="stylesheet" href="base.css">
+    
+    <style>
+        table {
+            border: solid 1px black;
+        }
+        table tbody th {
+            background-color: black;
+            color: white;
+        }
+        tabela tbody tr{
+            margin-top: auto;
+        }
+    
+        .container {
+            display: flex; /* Usando flexbox para alinhar os itens horizontalmente */
+            justify-content: space-between; /* Espaço entre os itens */
+            align-items: flex-start; /* Alinha os itens ao topo */
+        }
+
+         .image-container {
+            display: flex;
+            flex-direction: column; /* Alinha a imagem e o texto em coluna */
+            justify-content: flex-start; /* Alinha o conteúdo ao topo */
+            align-items: flex-start; /* Alinha o conteúdo à esquerda */
+            padding: 20px; /* Espaço em torno do contêiner de imagem/texto */
+        }
+
+         .image-container img {
+            width: 626px; /* Define a largura da imagem */
+            height: 140px; /* Mantém a proporção da imagem */
+            margin-top: auto; /* Espaço acima da imagem */
+            margin-left: auto; 
+            position: relative;
+            top: -20px;
+        }
+
+        table {
+        position: relative; /* Define a posição como relativa */
+        top: -180px; /* Move a tabela 20 pixels para cima */
+     }
      
+     .form-container {
+    position: relative; /* O contêiner deve ter uma posição relativa */
+  }
+
+.formulario {
+    top: -300px;
+    position: absolute; /* Alinha o formulário */
+    right: 370px; /* Define a posição à direita */
+    
+    
+}
+
+formulario input {
+  width: 100%; /* Define largura total do container pai */
+  max-width: 300px; /* Largura máxima para os inputs */
+  padding: 10px; /* Espaçamento interno para melhorar visualmente */
+  margin-bottom: 10px; /* Espaçamento entre cada campo */
+  box-sizing: border-box; /* Inclui borda e padding na largura */
+}
+
+.formulario textarea {
+  width: 100%; /* Mesma largura do input */
+  max-width: 300px; /* Mantém a largura máxima igual aos inputs */
+  padding: 10px; /* Espaçamento interno */
+  box-sizing: border-box;
+  height: 100px; /* Define uma altura maior para a área de texto */
+}
+
+.formulario button {
+  padding: 5px 20px; /* Ajusta o tamanho dos botões */
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.formulario button:hover{
+  background-color: blue;
+  font-weight: white;
+}
+
+.contato {
+  position: absolute; /* Posiciona .contato de forma independente */
+  top: 1170px; /* Distância do topo do contêiner */
+  right: 350px; /* Distância da borda direita do contêiner */
+  display: flex;
+  align-items: center; /* Alinha a imagem e o texto verticalmente */
+  gap: 8px; /* Espaçamento entre a imagem e o texto */
+}
+
+.contato img {
+  width: 30px; /* Ajuste do tamanho da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.map-container {
+  margin-top: -175px;
+  width: 350px; /* Largura do mapa */
+  height: 200px; /* Altura do mapa */
+  border-radius: 10px; /* Bordas arredondadas */
+  overflow: hidden; /* Esconde partes que ultrapassam as bordas */
+  border: 2px solid #ccc; /* Borda ao redor do mapa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito visual */
+}
+
+ nav ul {
+    display: flex; 
+    list-style: none;
+    margin: 0;
+
+}
+
+nav ul li a {
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+   
+
+}
+
+
+nav ul a:hover {
+    color: white;
+    background-color: blue;
+
+}
+
+nav {
+    position: absolute; /* Define o menu como posição absoluta */
+    top: 10px; /* Ajusta a posição verticalmente */
+    right: 500px; /* Ajusta a posição horizontalmente */
+    z-index: 10; /* Garante que o menu fique sobre a imagem */
+    background-color: rgba(245, 239, 239, 0.8); /* Fundo transparente para contraste */
+    padding: 10px; /* Espaçamento ao redor do menu */
+    border-radius: 20px; /* Bordas arredondadas */
+    margin: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 50px; /* Espaço entre os itens do menu */
+}
+
+nav ul li a {
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+    </style>
 </head>
 <body>
-   <h1> primeiros passos com html</h1>
-   <img src="https://wallpaperaccess.com/full/4868337.jpg" alt="html" width="1900px" height="400px">
-   <hr>
 
-   <h2>indice</h2>
-   <ul>
-   <li><a href="#tags"> <abbr title="clique aqui">Tags</abbr></a></li>
-   <li><a href="#Atributos"> <abbr title="clique aqui">>Atributos das Tags</abbr</a></li>
-   <li><a href="#Textos"> <abbr title="clique aqui">Texto</abbr></a></li>
-   <li><a href="#Listas"> <abbr title="clique aqui">Listas Ordenadas e Não Ordenadas</abbr></a></li>
-   <li><a href="#links"> <abbr title="links"></abbr></a></li>
-
-   </ul>
-   
-   <h2 id="inicio"><i>apresentação</i></h2>
-   <p> história da tecnologia é uma jornada fascinante que atravessa milênios, transformando a maneira </p>
-   <p> vivemos, trabalhamos e interagimos. Ela começou com as primeiras ferramentas de pedra </p>
-   <p> utilizadas pelos seres humanos primitivos e evoluiu até chegar às complexas redes de inteligência</p>
-   <p> artificial que moldam nosso mundo moderno.</p>
-
-   
-    <h2 id="tags"><i>tags</i></h2>
-    <p>As tags são a base para a construção de páginas HTML, definindo a estrutura de todo o conteúdo</p>
-    <p>exibido. <u>Elas servem para indicar o propósito de cada parte do documento,</u> como cabeçalhos,</p>
-    <p>parágrafos, listas e links. Cada tag possui uma função específica, contribuindo para organizar as</p>
-    <p>informações de forma hierárquica e compreensível. O uso correto das tags permite uma navegação</p>
-    <p>clara e eficiente para o usuário, além de possibilitar que o desenvolvedor defina a aparência e o</p>
-    <p>comportamento de cada elemento na página.</p>
-
-    <h2 id="Atributos"><i>Atributos das Tags</i></h2>
-    <small><a href="#inicio">(voltar)</a></small> 
-   <p>Além das tags em si, é comum utilizar atributos para personalizar ainda mais os elementos em uma</p>
-   <p>página HTML. Os atributos são informações adicionais que complementam as tags e ajudam a</p>
-   <p>definir características específicas de cada elemento. Eles são usados para modificar ou ajustar</p>
-   <p>aspectos como aparência, identificação e comportamento dos componentes na página. Por exemplo,</p>
-   <p>atributos como href (em links), src (em imagens) e id (para identificação única de um elemento)</p>
-   <p>desempenham um papel fundamental ao conferir flexibilidade e controle ao desenvolvedor.</p>
+  <nav>
+    <ul>
+      <li><a href="#sobre nos"><strong>sobre nos</strong></a></li>
+      <li><a href="#horarios e especialistas"><strong>horarios e especialistas</strong></a></li>
+      <li><a href="#contato"><strong>fale conosco</strong></li>
     
-    <h2 id="Textos"><i>Textos</i></h2> <mark></mark>
-    <small><a href="#inicio">(voltar)</a></small>
-   <p>Para a formatação de textos, a utilização de tags como cabeçalhos, parágrafos e elementos de</p>
-   <p>ênfase é essencial. A organização hierárquica dos títulos (do mais importante ao menos importante)</p>
-   <p>ajuda a guiar a leitura e a dividir o conteúdo em seções coerentes. Parágrafos são usados para</p>
-   <p>construir blocos de texto e comunicar ideias de forma organizada. Além disso, elementos como</p>
-   <p>negrito e itálico servem para destacar partes relevantes e dar maior ênfase a palavras ou frases</p>
-   <p>importantes. A formatação adequada do texto facilita a leitura e torna o conteúdo mais envolvente e</p>
-   <p>atrativo.</p>
+    </ul>
+  </nav>
 
-    <h2 id="Listas"><i>Listas Ordenadas e Não Ordenadas</i></h2>
-    <small><a href="#inicio">(voltar)</a></small>
-    <p>As listas são recursos fundamentais para agrupar informações de maneira estruturada.dois</p>
-    <p> <mark>listas: as listas ordenadas e as não ordenadas.</mark> As listas ordenadas utilizam uma</p>
-    <p>sequência numérica para organizar os itens, sendo ideais para guias passo a passo ou tópicos em</p>
-    <p>que a ordem é relevante. Já as listas não ordenadas usam marcadores, como pontos ou símbolos,</p>
-    <p>para apresentar itens de maneira independente, sem necessidade de uma sequência lógica. Ambas</p>
-    <p>são essenciais para organizar e apresentar informações de modo claro e visualmente atraente,</p>
-    <p>facilitando a compreensão do conteúdo.</p>
+  
+    
+  
+    <div class="wrapper">
+        <div class="menu" >
 
-    <h2 id="links"><i>Links</i></h2>
-    <small><a href="#inicio">(voltar)</a></small>
-    <p>Os links são elementos que permitem a navegação entre diferentes páginas e seções de um site. Eles</p>
-    <p>são usados para interligar conteúdos, proporcionando ao usuário uma experiência de navegação</p>
-    <p>dinâmica e fluida. Um link pode direcionar para páginas internas, externas ou para seções específicas</p>
-    <p>dentro da própria página, dependendo da estrutura definida. Com o uso correto de atributos como</p>
-    <p>href, os links se tornam uma das ferramentas mais poderosas para conectar informações e tornar</p>
-    <p>uma página interativa. Assim, eles desempenham um papel essencial na organização e na</p>
-    <p>usabilidade de qualquer site, permitindo a criação de experiências mais intuitivas e funcionais.</p>
+        <img src="https://www.ludicobox.com/wp-content/uploads/veterinaria.jpg" alt="foto do menu" width="200px" height="1500px" style="margin: 0; padding: 0; margin-left: 0; margin-right: 0;"  >
+        </div>
 
+        <div class="main">
+            <div class="header">
+               <img src="https://www.animalespetshop.com.br/cdn/shop/files/Design_sem_nome_14_1_687b0672-3fd4-4f5f-89d6-ff0128d4f53e.png?v=1714769354" width="1000px"  alt="foto do banner">
+                <!-- Aqui vai o seu header -->
+            </div>
+    
+            <div id="sobre nos" class="content">
+             
+               <thead>
+                <h1>seja bem vindo a clinica veterinaria animales petshop</h1>
+                <p> onde a saúde e o bem-estar dos animais são a nossa prioridade!</p>
+                <p>Com uma equipe altamente qualificada e apaixonada pelo cuidado animal, oferecemos</p>
+                <p>uma gama completa de serviços para garantir que seu pet receba o melhor tratamento, desde a</p>
+                <p>prevenção até os cuidados emergenciais.</p>
+               </thead>
+             
+                <!-- Aqui vai o seu conteúdo -->
+            </div>
+    
+            <div id="horarios e especialistas" class="footer" style="margin: 0; padding: 0; ">
+              <table summary="contato amigo fiel" border="1" width="350px" height="260px" >
+                
+                <tbody>
+
+                    <th>serviços</th>
+                 <th>segunda a sexta</th>
+                    <th>sábados</th>
+                    <th>feriados</th>
+                </tr>
+
+                <tr>
+       
+                    <td> clinica Geral</td> 
+                    <td>08h-19h</td>
+                    <td>08h-14h</td>
+                    <td>08h14h</td>
+                </tr>
+                <tr>
+                    <td>Dermatologia Veterinária</td>
+                    <td>08h-19h</td>
+                    <td>08h-14h</td>
+                    <td>08h14h</td>
+
+                </tr>
+                
+                <tr>
+                    <td>dermatologia</td>
+                    <td>08h-19h</td>
+                    <td>08h-18h</td>
+                    <td>  ------ </td>
+                </tr>
+
+               <tr>
+                 <td>comportamento animal</td>
+                 <td>08h-19h</td>
+                 <td>08h-18h</td>
+                 <td>------</td><br>
+                 <img src="https://www.shutterstock.com/image-photo/cropped-image-handsome-male-veterinarian-600nw-2140114091.jpg" alt="cão" width="975" height="270">
+                    
+               </tr>
+               <div class="image-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxA09Fn-CfgPqPxbvF4gTucEf--AassbQj7w&s" alt="contato" >
+
+            </div>
+     
+          
+            
+            
+              </table>
+            
+              <div id="contato" class="form-container">
+
+                <form class="formulario">
+                    Nome: <input type="text" name="name"><br>
+                    email: <input type="text" name="name"><br>
+                    assunto: <input type="text" name="name"><br>
+                    mensagem: <textarea name="mensagem"></textarea> <br>
+                    <button type="submit">enviar</button>
+                    <button type="reset">limpar</button>
+                </form>
+
+            </div>
+            
+            <div class="contato">
+                <img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" alt="whatsapp">
+                <p>WhatsApp: (91)988808274</p>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.44751407044!2d-48.470203249774876!3d-1.4090461149119726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48bf8f618f2b9%3A0xd8eb69028ec7af60!2sSuper%20Pet%20-%20Petshop!5e0!3m2!1spt-BR!2sbr!4v1730313854834!5m2!1spt-BR!2sbr" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              
+
+           
+
+
+
+                </form>
+              
+                    </tbody>
+
+                   
+                    
+
+                    
+                 
+                  
+                <!-- Aqui vai o seu rodapé -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>
